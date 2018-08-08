@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper item-grid hes-gallery">
-    <Photo v-for="item in photos" :item="item" :key="item.path" />
+    <Photo v-for="(item, index) in photos" :item="item" :key="index" @click.native="openGallery(index)" />
   </div>
 </template>
 
@@ -12,23 +12,19 @@ export default {
   components: {
     Photo
   },
-  data() {
+  data () {
     return {
       photos: require('@/photos.js')
+    }
+  },
+  methods: {
+    openGallery: function(index) {
+      HesGallery.show(0, index)
     }
   }
 }
 
-onload = () => {
-  let galItems = document.querySelectorAll('.hes-gallery .item')
-  galItems.forEach((el, index) => {
-      el.setAttribute('onclick', `HesGallery.show(0,${index})`)
-  })
-
-  HesGallery.init()
-}
-
 HesGallery.setOptions({
-    minResolution: 544
+  minResolution: 544
 })
 </script>

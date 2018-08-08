@@ -1,11 +1,11 @@
 <template>
   <header class="header">
-  
+
     <h2>Director & Photographer</h2>
     <h1>Karol Hipolit Kempiński</h1>
 
     <Navi />
-  
+
   </header>
 </template>
 

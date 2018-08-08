@@ -12,28 +12,30 @@
 <script>
 
 export default {
-    name: 'Photo',
-    props: {
-        item: {
-            type: Object,
-            required: true
-        }
-    },
-    data: {
-        title: '',
-        meta: '',
-        path: ''
-    },
-    data() {
-        return {
-            title: this.item.title,
-            meta: this.item.meta,
-            path: this.item.path
-        }
-    },
-    mounted() {
-        console.log(this.item)
+  name: 'Photo',
+  props: {
+    item: {
+      type: Object,
+      required: true
     }
+  },
+  data: function () {
+    return {
+      title: '',
+      meta: '',
+      path: ''
+    }
+  },
+  data () {
+    return {
+      title: this.item.title,
+      meta: this.item.meta,
+      path: this.item.path
+    }
+  },
+  mounted () {
+    // console.log(this.item)
+  }
 }
 </script>
 

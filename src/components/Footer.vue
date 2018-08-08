@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Footer'
+  name: 'Footer'
 }
 </script>
 
@@ -29,5 +29,3 @@ export default {
   }
 }
 </style>
-
-

@@ -1,12 +1,12 @@
 <template>
   <nav class="nav">
-      <ul class="nav__menu">
-        <li><router-link to="/photo">Zdjęcia</router-link></li>
-        <li><router-link to="/video">Wideo</router-link></li>
-        <li><router-link to="/coop">Współpraca</router-link></li>
-        <li><router-link to="/contact">Kontakt</router-link></li>
+      <ul class="nav__menu" :class="{'nav__menu--active': toggleMenu}">
+        <li @click="handleMenu"><router-link to="/photo">Zdjęcia</router-link></li>
+        <li @click="handleMenu"><router-link to="/video">Wideo</router-link></li>
+        <li @click="handleMenu"><router-link to="/coop">Współpraca</router-link></li>
+        <li @click="handleMenu"><router-link to="/contact">Kontakt</router-link></li>
       </ul>
-      <div class="nav__trigger">
+      <div class="nav__trigger" :class="{'nav__trigger--active': toggleMenu}" @click="handleMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -16,10 +16,19 @@
 
 <script>
 export default {
-  name: "Navi",
+  name: 'Navi',
+  data () {
+    return {
+      toggleMenu: false
+    }
+  },
+  methods: {
+    handleMenu: function () {
+      this.toggleMenu = !this.toggleMenu
+    }
+  }
 }
 </script>
-
 
 <style lang="scss" scoped>
 @import '../settings.scss';
@@ -35,6 +44,7 @@ export default {
     right: 10px;
     width: 32px;
     transition: 0.3s;
+    z-index: 120;
 
     span {
       display: block;
@@ -83,7 +93,7 @@ export default {
     opacity: 1;
     visibility: visible;
   }
-  
+
   li a {
     display: block;
     padding: 10px 5px;

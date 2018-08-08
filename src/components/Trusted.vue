@@ -14,7 +14,7 @@
 
 <script>
 export default {
-    name: 'Trusted'
+  name: 'Trusted'
 }
 </script>
 
@@ -60,5 +60,3 @@ export default {
   }
 }
 </style>
-
-

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    name: 'Coop'
+  name: 'Coop'
 }
 </script>

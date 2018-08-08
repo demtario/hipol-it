@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <Header />
-    
+
     <main>
       <transition name="fade">
         <router-view></router-view>
       </transition>
     </main>
-    
+
     <Trusted />
     <Footer />
   </div>
@@ -21,12 +21,11 @@ import Trusted from '@/components/Trusted.vue'
 
 export default {
   name: 'App',
-  components : {
+  components: {
     Header, Footer, Trusted
   }
 }
 </script>
-
 
 <style lang="scss">
 
@@ -47,7 +46,7 @@ body {
 }
 
 main {
-  min-height: 50vh;
+  min-height: calc(100vh - 415px);
   justify-items: start;
   align-items: start;
 }
@@ -59,7 +58,7 @@ img {
 .wrapper {
 
   padding: 5px;
-  
+
   @media #{$media-xs} {
     padding: 10px 20px;
   }
@@ -70,7 +69,7 @@ img {
   justify-self: start;
   grid-template-columns: 1fr;
   grid-gap: 1px;
-  
+
   @media #{$media-xs} {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     // grid-auto-rows: 200px;
