@@ -1,29 +1,116 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header />
+    
+    <main>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </main>
+    
+    <Trusted />
+    <Footer />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+import Trusted from '@/components/Trusted.vue'
+
+export default {
+  name: 'App',
+  components : {
+    Header, Footer, Trusted
   }
+}
+</script>
+
+
+<style lang="scss">
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600');
+
+@import 'settings.scss';
+
+html {
+  background-color: #eee !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background-color: transparent;
+  color: #222;
+}
+
+main {
+  min-height: 50vh;
+  justify-items: start;
+  align-items: start;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+
+  padding: 5px;
+  
+  @media #{$media-xs} {
+    padding: 10px 20px;
+  }
+}
+
+.item-grid {
+  display: grid;
+  justify-self: start;
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+  
+  @media #{$media-xs} {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    // grid-auto-rows: 200px;
+  }
+}
+
+.title-text {
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.logo-grid {
+  display: grid;
+  width: 100%;
+  grid-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+
+  @media #{$media-md} {
+    width: 70%;
+    margin:  0 auto;
+  }
+
+  @media #{$media-xl} {
+    width: 40%;
+  }
+}
+
+// Anim
+.fade-enter-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>
