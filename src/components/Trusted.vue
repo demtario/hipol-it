@@ -50,12 +50,12 @@ export default {
     align-items: center;
 
     @media #{$media-md} {
-      width: 70%;
-      margin:  0 auto;
+      width: 100%;
+      margin: 0 auto;
     }
 
     @media #{$media-xl} {
-      width: 50%;
+      width: 860px;
     }
   }
 }
