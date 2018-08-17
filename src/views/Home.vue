@@ -25,6 +25,7 @@ export default {
 }
 
 HesGallery.setOptions({
-  minResolution: 544
+  minResolution: 544,
+  showCredits: true
 })
 </script>

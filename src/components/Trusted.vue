@@ -1,13 +1,12 @@
 <template>
     <div class="trusted">
-        <h3 class="title-text">Zaufali mi</h3>
+        <h3 class="title-text">They trusted me</h3>
         <div class="trusted__grid">
-            <img src="../assets/img/coop/c1.jpg" alt="Nazwa firmy">
-            <img src="../assets/img/coop/c2.jpg" alt="Nazwa firmy">
-            <img src="../assets/img/coop/c3.jpg" alt="Nazwa firmy">
-            <img src="../assets/img/coop/c4.jpg" alt="Nazwa firmy">
-            <img src="../assets/img/coop/c5.jpg" alt="Nazwa firmy">
-            <img src="../assets/img/coop/c6.jpg" alt="Nazwa firmy">
+            <img src="../assets/img/coop/proxymedia.jpg" alt="Proxymedia films">
+            <img src="../assets/img/coop/heseya.jpg" alt="Heseya sp. z o.o.">
+            <img src="../assets/img/coop/impresariat.jpg" alt="Scena Studio Impresariat">
+            <img src="../assets/img/coop/event.jpg" alt="Scena Studio Event">
+            <img src="../assets/img/coop/akadmuz.jpg" alt="Akademia Muzyczna">
         </div>
     </div>
 </template>
@@ -45,7 +44,7 @@ export default {
     grid-gap: 20px;
     padding: 20px;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     justify-items: center;
     align-items: center;
 

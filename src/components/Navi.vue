@@ -1,10 +1,9 @@
 <template>
   <nav class="nav">
       <ul class="nav__menu" :class="{'nav__menu--active': toggleMenu}">
-        <li @click="handleMenu"><router-link to="/photo">Zdjęcia</router-link></li>
-        <li @click="handleMenu"><router-link to="/video">Wideo</router-link></li>
-        <li @click="handleMenu"><router-link to="/coop">Współpraca</router-link></li>
-        <li @click="handleMenu"><router-link to="/contact">Kontakt</router-link></li>
+        <li @click="handleMenu"><router-link to="/photo">Photos</router-link></li>
+        <li @click="handleMenu"><router-link to="/video">Video</router-link></li>
+        <li @click="handleMenu"><router-link to="/contact">Contact</router-link></li>
       </ul>
       <div class="nav__trigger" :class="{'nav__trigger--active': toggleMenu}" @click="handleMenu">
         <span></span>
@@ -24,7 +23,7 @@ export default {
   },
   methods: {
     handleMenu: function () {
-      this.toggleMenu = !this.toggleMenu
+      if(innerWidth < 544) this.toggleMenu = !this.toggleMenu
     }
   }
 }
@@ -107,12 +106,16 @@ export default {
     &::before {
       content: '';
       position: absolute;
-      bottom: 3px;
+      bottom: 6px;
       left: 50%;
       transform: translateX(-50%);
       border-bottom: solid 1px #333;
       width: 0;
       transition: 0.3s;
+
+      @media #{$media-sm} {
+        bottom: 3px;
+      }
     }
 
     &:hover::before,

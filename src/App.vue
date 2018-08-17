@@ -46,9 +46,12 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 415px);
   justify-items: start;
   align-items: start;
+
+  @media #{$media-md} {
+    min-height: calc(100vh - 415px);
+  }
 }
 
 img {

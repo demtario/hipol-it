@@ -1,6 +1,7 @@
 <template>
     <footer class="footer">
         Karol Hipolit Kempiński &copy; 2018 - Designed by <a href="https://amedrygal.pl" target="_blank">Artur Mędrygał</a> - <a href="https://heseya.com" target="_blank">Heseya</a>
+        <small><a href="https://www.flaticon.com/authors/freepik" target="_blank">Icons designed by freepik from Flaticon</a></small>
     </footer>
 </template>
 
@@ -27,5 +28,9 @@ export default {
       text-decoration: underline;
     }
   }
+}
+
+small {
+  display: block;
 }
 </style>
