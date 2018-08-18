@@ -67,18 +67,6 @@ img {
   }
 }
 
-.item-grid {
-  display: grid;
-  justify-self: start;
-  grid-template-columns: 1fr;
-  grid-gap: 1px;
-
-  @media #{$media-xs} {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    // grid-auto-rows: 200px;
-  }
-}
-
 .title-text {
   font-weight: 400;
   text-align: center;

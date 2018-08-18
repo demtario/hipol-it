@@ -18,14 +18,30 @@ export default {
     }
   },
   methods: {
-    openGallery: function(index) {
+    openGallery: function (index) {
+      // eslint-disable-next-line
       HesGallery.show(0, index)
     }
   }
 }
 
+// eslint-disable-next-line
 HesGallery.setOptions({
   minResolution: 544,
   showCredits: true
 })
 </script>
+
+<style lang="scss" scoped>
+@import '../settings.scss';
+.item-grid {
+  display: grid;
+  justify-self: start;
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+
+  @media #{$media-sm} {
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  }
+}
+</style>

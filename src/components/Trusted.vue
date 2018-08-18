@@ -1,12 +1,12 @@
 <template>
     <div class="trusted">
-        <h3 class="title-text">They trusted me</h3>
+        <h3 class="title-text">Zaufali mi</h3>
         <div class="trusted__grid">
-            <img src="../assets/img/coop/proxymedia.jpg" alt="Proxymedia films">
-            <img src="../assets/img/coop/heseya.jpg" alt="Heseya sp. z o.o.">
-            <img src="../assets/img/coop/impresariat.jpg" alt="Scena Studio Impresariat">
-            <img src="../assets/img/coop/event.jpg" alt="Scena Studio Event">
-            <img src="../assets/img/coop/akadmuz.jpg" alt="Akademia Muzyczna">
+            <img src="../assets/img/coop/proxymedia.jpg" alt="Proxymedia films" title="Proxymedia films">
+            <img src="../assets/img/coop/heseya.jpg" alt="Heseya Video Productions" title="Heseya Video Productions">
+            <img src="../assets/img/coop/impresariat.jpg" alt="Scena Studio Impresariat" title="Scena Studio Impresariat">
+            <img src="../assets/img/coop/event.jpg" alt="Scena Studio Event" title="Scena Studio Event">
+            <img src="../assets/img/coop/akadmuz.jpg" alt="Akademia Muzyczna w Bydgoszczy" title="Akademia Muzyczna w Bydgoszczy">
         </div>
     </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <nav class="nav">
       <ul class="nav__menu" :class="{'nav__menu--active': toggleMenu}">
-        <li @click="handleMenu"><router-link to="/photo">Photos</router-link></li>
-        <li @click="handleMenu"><router-link to="/video">Video</router-link></li>
-        <li @click="handleMenu"><router-link to="/contact">Contact</router-link></li>
+        <li @click="handleMenu"><router-link to="/photo">Zdjęcia</router-link></li>
+        <li @click="handleMenu"><router-link to="/video">Filmy</router-link></li>
+        <li @click="handleMenu"><router-link to="/contact">Kontakt</router-link></li>
       </ul>
       <div class="nav__trigger" :class="{'nav__trigger--active': toggleMenu}" @click="handleMenu">
         <span></span>
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     handleMenu: function () {
-      if(innerWidth < 544) this.toggleMenu = !this.toggleMenu
+      if (innerWidth < 544) this.toggleMenu = !this.toggleMenu
     }
   }
 }
@@ -51,14 +51,22 @@ export default {
       height: 1px;
       background-color: #222;
       margin: 6px 0;
+      transition: 0.3s;
     }
 
     &--active {
       z-index: 101;
-      width: 38px;
 
-      span {
-        margin: 8px 0;
+      span:first-of-type {
+        transform: translateY(7px) rotate(-45deg)
+      }
+
+      span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      span:nth-of-type(3) {
+        transform: translateY(-7px) rotate(45deg)
       }
     }
 
