@@ -79,6 +79,7 @@ export default {
       position: relative;
       bottom: -16px;
       transition: 0.3s;
+      // display: none;
     }
 
     hr {
@@ -94,6 +95,7 @@ export default {
       position: relative;
       top: -16px;
       transition: 0.3s;
+      // display: none;
     }
   }
 

@@ -45,6 +45,23 @@ body {
   color: #222;
 }
 
+::selection {
+  background-color: #444;
+  color: #eee;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
 main {
   justify-items: start;
   align-items: start;

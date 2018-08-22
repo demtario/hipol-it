@@ -1,7 +1,23 @@
 <template>
-    <div class="wrapper">
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fPg6h3e2xTE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div>
+        <div class="wrapper">
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/285830821?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="more-videos">
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/285814576?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/285830240?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/285829777?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/285709325?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </template>
@@ -22,16 +38,8 @@ export default {
     box-sizing: border-box;
     margin: 0 auto;
 
-    @media #{$media-sm} {
-        width: 90%;
-    }
-
-    @media #{$media-sm} {
-        width: 80%;
-    }
-
     @media #{$media-lg} {
-        width: 70%;
+        width: 75%;
     }
 
     @media #{$media-xl} {
@@ -42,7 +50,6 @@ export default {
 .video {
     width: 100%;
     padding-bottom: 56.25%;
-    background-color: #fff;
     position: relative;
 
     iframe {
@@ -51,6 +58,21 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.more-videos {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 24px;
+
+    @media #{$media-lg} {
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        
     }
 }
 </style>

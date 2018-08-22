@@ -23,7 +23,15 @@ export default {
   },
   methods: {
     handleMenu: function () {
-      if (innerWidth < 544) this.toggleMenu = !this.toggleMenu
+      if (innerWidth < 544) {
+        if(this.toggleMenu)
+          document.body.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        
+        this.toggleMenu = !this.toggleMenu
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
         <br> -->
         <a href="mailto:kempinskikarol@outlook.com" class="mail">kempinskikarol@outlook.com</a>
         <a href="tel:731 251 240" class="phone">731 251 240</a>
-        <a href="https://www.instagram.com/hipolit2/" target="_blank" class="insta">hipolit2</a>
+        <a href="https://www.instagram.com/hipol.it/" target="_blank" class="insta">hipol.it</a>
     </div>
 </template>
 

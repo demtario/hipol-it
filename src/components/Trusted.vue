@@ -40,7 +40,7 @@ export default {
 
   &__grid {
     display: grid;
-    width: 100%;
+    width: 70%;
     grid-gap: 20px;
     padding: 20px;
     box-sizing: border-box;

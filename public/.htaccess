@@ -1,0 +1,6 @@
+Options +FollowSymLinks +ExecCGI
+Options -MultiViews
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !(\.svg|\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.ico|\.css|\.js|\.txt|\.mp4)$
+RewriteRule (.*) index.html [QSA]
