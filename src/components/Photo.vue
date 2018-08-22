@@ -1,10 +1,15 @@
 <template>
     <div class="item">
-        <img class="item__img" :src="path" :alt="title" :data-subtext="title">
+        <img class="item__img" :src="path" :alt="title">
         <div class="item__overlay">
-            <h3>{{ title }}</h3>
-            <hr>
-            <p>{{ meta }}</p>
+            <!-- <h3>{{ title }}</h3> -->
+            <!-- <hr> -->
+            <!-- <p>{{ meta }}</p> -->
+            
+            <div>
+              <span></span>
+              <p><img src="@/assets/icons/search.svg" data-disabled="true"></p>
+            </div>
         </div>
     </div>
 </template>
@@ -96,6 +101,66 @@ export default {
       top: -16px;
       transition: 0.3s;
       // display: none;
+
+      img {
+        height: 20px;
+        opacity: 0.8;
+      }
+    }
+
+    div {
+      width: 120%;
+      height: 120%;
+      transition: 0.3s;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          border-top: 1px solid #fff;
+          border-left: 1px solid #fff;
+      }
+      &:after {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          border-top: 1px solid #fff;
+          border-right: 1px solid #fff;
+      }
+      span:before {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: -10px;
+          left: -10px;
+          border-bottom: 1px solid #fff;
+          border-left: 1px solid #fff;
+      }
+      span:after {
+          display: block;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: -10px;
+          right: -10px;
+          border-bottom: 1px solid #fff;
+          border-right: 1px solid #fff;
+      }
     }
   }
 
@@ -112,6 +177,11 @@ export default {
 
     p {
       top: 0;
+    }
+
+    div {
+      width: 90%;
+      height: 90%;
     }
   }
 }

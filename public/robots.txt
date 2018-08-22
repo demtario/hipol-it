@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://hipol.it/sitemap.xml
